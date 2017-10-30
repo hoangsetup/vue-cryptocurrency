@@ -27,7 +27,7 @@ let app = new Vue({
          */
         getCoinData: function () {
             let self = this;
-            axios.get(CRYPTOCOMPARE_API_URI + "/api/data/coinlist")
+            axios.get("./static/coins.json")
                 .then((resp) => {
                     this.coinData = resp.data.Data;
                     this.getCoins();
@@ -60,6 +60,11 @@ let app = new Vue({
         getCoinImage: function (symbol) {
             symbol = (symbol === "MIOTA" ? "IOT" : symbol);
             symbol = (symbol === "VERI" ? "VRM" : symbol);
+            symbol = (symbol === "BCC" ? "BCCOIN" : symbol);
+            if (!this.coinData[symbol]) {
+                console.log('Special symbol', symbol);
+                return;
+            }
             return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
         },
         getColor: (num) => {
