@@ -1,0 +1,23 @@
+{
+  "name": "vue-cryptocurrency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangsetup/vue-cryptocurrency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangsetup/vue-cryptocurrency/issues"
+  },
+  "homepage": "https://github.com/hoangsetup/vue-cryptocurrency#readme",
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}
